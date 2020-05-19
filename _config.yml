@@ -97,7 +97,7 @@ footer-link-col: "#404040"
 #gtag: ""
 
 # Fill in your Google Analytics ID to track your website using GA
-#google_analytics: ""
+google_analytics: "UA-91755279-1"
 
 # Google Tag Manager ID
 #gtm: ""
@@ -190,8 +190,6 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
-  - screenshot.png
-  - docs/
 
 plugins:
   - jekyll-paginate
