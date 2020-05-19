@@ -117,7 +117,7 @@ public  class  ApolloHelper {
 }
 ```
 
-## Inside ApolloHelper.swift we can call the RegisterUserMutation
+Inside ApolloHelper.swift we can call the RegisterUserMutation
 
 ```swift
 // MARK: - RegisterUserMutation
@@ -154,6 +154,7 @@ public  class  ApolloHelper {
 ```
 
 ## Error handling: ApolloHelper+Error.swift
+I created an extension for handling error messages form the apollo client
 
 ```swift
 import Apollo
@@ -205,7 +206,8 @@ extension ApolloHelper: HTTPNetworkTransportPreflightDelegate {
 ```
 
 
-# Finally, using the ApolloHelper class is as simple as
+# Finally, using the ApolloHelper class
+On success we can acess the LoginDetails fragment defined on Mutations.graphql
 
 ```swift
 func signUpButtonTapped() {
