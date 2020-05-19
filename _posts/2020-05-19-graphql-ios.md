@@ -1,6 +1,6 @@
 ---
 layout: post
-title: GraphQL on iOS
+title: GraphQL in iOS
 tags: [GraphQL, iOS]
 comments: true
 ---
