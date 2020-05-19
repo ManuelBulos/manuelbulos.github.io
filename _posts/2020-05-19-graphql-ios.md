@@ -35,7 +35,7 @@ In this case I use [CocoaPods]([https://cocoapods.org/](https://cocoapods.org/))
 
 	When the project is built it will create or update the **API.swift** file inside the same folder.
 
-# Adding Queries and Mutations
+## Adding Queries and Mutations
 
 Apollo creates our swift objects using the schema.json file, but also all the .graphql files it can find inside our project.
 
@@ -47,7 +47,7 @@ We can add our queries and mutations in two new empty files inside our target fo
 
 Now everytime the project builds it will use all the queries and mutations defined on those files to create the swift objects on the API.swift file.
 
-# Using the new generated code from API.swift
+## Mutations.graphql file
 
 This is how my Mutations.graphql file looks. It's a common authentication process with social logins.
 ```
@@ -80,6 +80,7 @@ fragment LoginDetails on LoginResult {
  }
 }
 ```
+
 
 # Making the requests: ApolloHelper.swift
 I like to abstract my network requests into a new class
@@ -117,7 +118,6 @@ public  class  ApolloHelper {
 ```
 
 ## Inside ApolloHelper.swift we can call the RegisterUserMutation
-
 ```swift
 // MARK: - RegisterUserMutation
 
@@ -203,7 +203,7 @@ extension ApolloHelper: HTTPNetworkTransportPreflightDelegate {
 ```
 
 
-## Finally, using the ApolloHelper class is as simple as
+# Finally, using the ApolloHelper class is as simple as
 ```swift
 func signUpButtonTapped() {
         apolloHelper.registerUser(credentials: credentials) { (result) in
@@ -218,7 +218,6 @@ func signUpButtonTapped() {
         }
     }
 ```
-
 
 **Note:** If something is not working as expected make sure:
 - All queries and mutations written inside your .graphql files are working on your [GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/)
