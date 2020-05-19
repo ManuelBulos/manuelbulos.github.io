@@ -81,8 +81,7 @@ fragment LoginDetails on LoginResult {
 }
 ```
 
-
-## Making the requests: ApolloHelper.swift
+# Making the requests: ApolloHelper.swift
 I like to abstract my network requests into a new class
 
 ```swift
@@ -117,8 +116,7 @@ public  class  ApolloHelper {
 }
 ```
 
-
-### Inside ApolloHelper.swift we can call the RegisterUserMutation
+## Inside ApolloHelper.swift we can call the RegisterUserMutation
 
 ```swift
 // MARK: - RegisterUserMutation
@@ -154,8 +152,7 @@ public  class  ApolloHelper {
     }
 ```
 
-
-### Error handling: ApolloHelper+Error.swift
+## Error handling: ApolloHelper+Error.swift
 ```swift
 import Apollo
 
@@ -189,9 +186,7 @@ extension Array where Element == GraphQLError {
 
 ```
 
-
-### Authenticated Requests: ApolloHelper+HTTP.swift
-
+## Authenticated Requests: ApolloHelper+HTTP.swift
 We don't need it for this example, but we can add HTTP headers to any request like this:
 
 ```swift
@@ -208,7 +203,7 @@ extension ApolloHelper: HTTPNetworkTransportPreflightDelegate {
 ```
 
 
-### Finally, using the ApolloHelper class is as simple as
+## Finally, using the ApolloHelper class is as simple as
 ```swift
 func signUpButtonTapped() {
         apolloHelper.registerUser(credentials: credentials) { (result) in
