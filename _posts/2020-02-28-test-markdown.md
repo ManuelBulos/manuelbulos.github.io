@@ -2,7 +2,7 @@
 layout: post
 title: Sample blog post
 subtitle: Each post also has a subtitle
-gh-repo: daattali/beautiful-jekyll
+gh-repo: ManuelBulos/App-Store-Clone
 gh-badge: [star, fork, follow]
 #cover-img: /assets/img/path.jpg
 tags: [test]
