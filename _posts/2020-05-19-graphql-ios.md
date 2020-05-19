@@ -118,6 +118,7 @@ public  class  ApolloHelper {
 ```
 
 ## Inside ApolloHelper.swift we can call the RegisterUserMutation
+
 ```swift
 // MARK: - RegisterUserMutation
 
@@ -153,6 +154,7 @@ public  class  ApolloHelper {
 ```
 
 ## Error handling: ApolloHelper+Error.swift
+
 ```swift
 import Apollo
 
@@ -204,6 +206,7 @@ extension ApolloHelper: HTTPNetworkTransportPreflightDelegate {
 
 
 # Finally, using the ApolloHelper class is as simple as
+
 ```swift
 func signUpButtonTapped() {
         apolloHelper.registerUser(credentials: credentials) { (result) in
