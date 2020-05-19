@@ -81,11 +81,9 @@ fragment LoginDetails on LoginResult {
 }
 ```
 
-## Making the requests
 
+## Making the requests: ApolloHelper.swift
 I like to abstract my network requests into a new class
-
-### ApolloHelper.swift
 
 ```swift
 import Apollo
@@ -118,6 +116,7 @@ public  class  ApolloHelper {
 	}
 }
 ```
+
 
 ### Inside ApolloHelper.swift we can call the RegisterUserMutation
 
@@ -155,6 +154,7 @@ public  class  ApolloHelper {
     }
 ```
 
+
 ### Error handling: ApolloHelper+Error.swift
 ```swift
 import Apollo
@@ -189,6 +189,7 @@ extension Array where Element == GraphQLError {
 
 ```
 
+
 ### Authenticated Requests: ApolloHelper+HTTP.swift
 
 We don't need it for this example, but we can add HTTP headers to any request like this:
@@ -206,6 +207,7 @@ extension ApolloHelper: HTTPNetworkTransportPreflightDelegate {
 
 ```
 
+
 ### Finally, using the ApolloHelper class is as simple as
 ```swift
 func signUpButtonTapped() {
@@ -222,7 +224,6 @@ func signUpButtonTapped() {
     }
 ```
 
-{: .box-note}
 
 **Note:** If something is not working as expected make sure:
 - All queries and mutations written inside your .graphql files are working on your [GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/)
