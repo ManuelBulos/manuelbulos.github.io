@@ -7,7 +7,6 @@ comments: true
 
 # Project Setup
 
-## Apollo
 - We use the [Apollo](https://github.com/apollographql/apollo-ios) client to execute queries and mutations against a GraphQL server. 
 
 - It returns results as query-specific Swift types. 
