@@ -53,7 +53,7 @@ This is how my Mutations.graphql file looks. It's a common authentication proces
 ```
 mutation registerUser($email: String!, $password: String!) {
  registerUser(email: $email, password: $password) {
-	...LoginDetails
+  ...LoginDetails
  }
 }
 
