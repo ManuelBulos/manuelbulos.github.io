@@ -2,26 +2,26 @@
 layout: post
 title: GraphQL in iOS
 tags: [GraphQL, iOS]
+cover-img: https://i.imgrpost.com/imgr/2020/05/20/graphql-cover.png
 comments: true
 ---
+# GraphQL in iOS
 
-# Project Setup
+- We use the [Apollo](https://github.com/apollographql/apollo-ios) client to execute queries and mutations against a GraphQL server.
 
-- We use the [Apollo](https://github.com/apollographql/apollo-ios) client to execute queries and mutations against a GraphQL server. 
-
-- It returns results as query-specific Swift types. 
+- It returns results as query-specific Swift types.
 
 - Apollo auto generates these Input and Output objects inside a file called API.swift, do **NOT** modify this file.
 
 ## Automatic Code Generation
 
-1. Download the **schema.json** file from your GraphQL endpoint and add it to your xcode project. 
+1. Download the **schema.json** file from your GraphQL endpoint and add it to your xcode project.
 
 	We can download it by installing the apollo package
 	```
 	npm install -g apollo
 	```
-	and then running : 
+	and then running :
 	```
 	apollo schema:download --endpoint=https://<YOUR-GRAPHQL-ENDPOINT> schema.json
 	```
