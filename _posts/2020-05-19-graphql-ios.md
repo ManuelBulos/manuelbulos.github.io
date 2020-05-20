@@ -91,29 +91,29 @@ import Apollo
 /// Network Layer
 public class ApolloHelper {
 
-	/// The GraphQL Endpoint
-	let graphQLURL: URL
+  /// The GraphQL Endpoint
+  let graphQLURL: URL
 
-	///  Apollo Client
-	private(set) lazy var apollo: ApolloClient = {
-		let httpNetworkTransport = HTTPNetworkTransport(url: graphQLURL)
-		httpNetworkTransport.delegate = self
-		return ApolloClient(networkTransport: httpNetworkTransport)
-	}()
+  ///  Apollo Client
+  private(set) lazy var apollo: ApolloClient = {
+    let httpNetworkTransport = HTTPNetworkTransport(url: graphQLURL)
+    httpNetworkTransport.delegate = self
+    return ApolloClient(networkTransport: httpNetworkTransport)
+  }()
 
-	/// Adds "Authorization" header to each authenticated request
-	var authorizationToken: String = String()
+  /// Adds "Authorization" header to each authenticated request
+  var authorizationToken: String = String()
 
-	/// Sets the ApolloClient endpoint and configures cache
-	init(graphQLURL: URL) {
-		self.graphQLURL = graphQLURL
-		self.initCache()
-	}
+  /// Sets the ApolloClient endpoint and configures cache
+  init(graphQLURL: URL) {
+    self.graphQLURL = graphQLURL
+    self.initCache()
+  }
 
-	/// Uses key "id" of each fetched object for caching purposes
-	private func initCache() {
-		apollo.cacheKeyForObject = { $0["id"] }
-	}
+  /// Uses key "id" of each fetched object for caching purposes
+  private func initCache() {
+    apollo.cacheKeyForObject = { $0["id"] }
+  }
 }
 ```
 
