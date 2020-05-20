@@ -3,6 +3,7 @@ layout: post
 title: GraphQL in iOS
 tags: [GraphQL, iOS]
 cover-img: https://i.imgrpost.com/imgr/2020/05/20/graphql-cover.png
+share-img: https://i.imgrpost.com/imgr/2020/05/20/graphql-cover.png
 comments: false
 ---
 # GraphQL in iOS
