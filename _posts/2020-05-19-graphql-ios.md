@@ -18,13 +18,13 @@ comments: true
 1. Download the **schema.json** file from your GraphQL endpoint and add it to your xcode project. 
 
 	We can download it by installing the apollo package
-	~~~
-	 `npm install -g apollo`
-	 ~~~
+	```
+	npm install -g apollo
+	```
 	and then running : 
-	~~~
-	`apollo schema:download --endpoint=https://<YOUR-GRAPHQL-ENDPOINT> schema.json` 
-	~~~
+	```
+	apollo schema:download --endpoint=https://<YOUR-GRAPHQL-ENDPOINT> schema.json
+	```
 2. Add a Build Phase to your xcode target, we can call it '_Generate Apollo GraphQL API_'
 
 	[Get The Build Phase Script](https://www.apollographql.com/docs/ios/installation/#adding-a-code-generation-build-step) depending on how you installed Apollo (cocoapods, carthage or SPM)
@@ -88,21 +88,21 @@ I like to abstract my network requests into a new class
 ```swift
 import Apollo
 
-///  Network Layer
-public  class  ApolloHelper {
+/// Network Layer
+public class ApolloHelper {
 
-	///  The GraphQL Endpoint
-	let  graphQLURL: URL
+	/// The GraphQL Endpoint
+	let graphQLURL: URL
 
 	///  Apollo Client
-	private(set)  lazy  var  apollo: ApolloClient = {
+	private(set) lazy var apollo: ApolloClient = {
 		let httpNetworkTransport = HTTPNetworkTransport(url: graphQLURL)
 		httpNetworkTransport.delegate = self
 		return ApolloClient(networkTransport: httpNetworkTransport)
 	}()
 
-	///  Adds "Authorization" header to each authenticated request
-	var  authorizationToken: String = String()
+	/// Adds "Authorization" header to each authenticated request
+	var authorizationToken: String = String()
 
 	/// Sets the ApolloClient endpoint and configures cache
 	init(graphQLURL: URL) {
@@ -110,12 +110,13 @@ public  class  ApolloHelper {
 		self.initCache()
 	}
 
-	///  Uses key "id" of each fetched object for caching purposes
-	private  func  initCache() {
+	/// Uses key "id" of each fetched object for caching purposes
+	private func initCache() {
 		apollo.cacheKeyForObject = { $0["id"] }
 	}
 }
 ```
+
 
 Inside ApolloHelper.swift we can call the RegisterUserMutation
 
