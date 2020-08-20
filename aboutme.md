@@ -3,6 +3,4 @@ layout: page
 title: About me
 ---
 
-👋Hello, this is me:
-
-- iOS / macOS Developer. Learning about web development with ReactJS and hooks.
+👋 Hello, I'm a Software Developer. Actively looking for investment opportunities.
