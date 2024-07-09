@@ -1,5 +1,151 @@
----
-layout: home
-title: Lifelog
-subtitle: Introspection and coding tutorials 💆‍♂️
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Manuel Solis Bulos - iOS Developer</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #0F0;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #0F0;
+            border-bottom: 1px solid #0F0;
+            padding-bottom: 10px;
+        }
+        .blink {
+            animation: blink-animation 1s steps(5, start) infinite;
+        }
+        @keyframes blink-animation {
+            to {
+                visibility: hidden;
+            }
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li::before {
+            content: "> ";
+            color: #0F0;
+        }
+        a {
+            color: #0FF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .highlight-top {
+            color: #FF0;
+            font-weight: bold;
+        }
+        .social-links a {
+            margin-right: 10px;
+        }
+        .skills-chart {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .skill-bar {
+            width: 18%;
+            background-color: #333;
+            height: 150px;
+            position: relative;
+        }
+        .skill-level {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #0F0;
+        }
+        .skill-name {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 5px 0;
+            color: #FFF;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><span class="blink">&gt;</span> Jose Manuel Solis Bulos</h1>
+        <p><span class="highlight-top">Senior iOS Developer / Tech Lead</span>
+          <br>Location: Mexico
+          <br>Contact: manuelbulos@gmail.com
+          <br>LinkedIn: <a href="https://linkedin.com/in/manuelbulos" target="_blank">linkedin.com/in/manuelbulos</a></p>
+      
+      <h2><span class="blink">&gt;</span> iOS App Portfolio</h2>
+        <ul>
+            <li><a href="https://apps.apple.com/app/procore/id374930542" target="_blank">Procore</a> - Construction management app</li>
+            <li><a href="https://apps.apple.com/us/app/flavor-maker-by-mccormick/id1440670503" target="_blank">McCormick (Flavor Maker)</a> - Recipe and cooking app</li>
+            <li><a href="https://apps.apple.com/us/app/carbon-voice/id1567782769" target="_blank">Carbon Voice</a> - Audio-based social app</li>
+            <li><a href="https://apps.apple.com/us/app/1800flowers/id457699767" target="_blank">1800Flowers</a> - E-commerce floral delivery app</li>
+            <li><a href="https://apps.apple.com/us/app/samsung-health/id1224541484" target="_blank">Samsung Health</a> - Health and fitness tracking app</li>
+            <li><a href="https://apps.apple.com/us/app/kik-messaging-chat-app/id357218860" target="_blank">Kik</a> - Messaging app</li>
+            <li><a href="https://apps.apple.com/us/app/cemex-today/id1299188257" target="_blank">CEMEX Today</a> - Corporate communication app</li>
+            <li><a href="https://apps.apple.com/mx/app/mychristus/id1484091477" target="_blank">MyChristus</a> - Healthcare services app</li>
+            <li><a href="https://apps.apple.com/us/app/tripsource/id710472405" target="_blank">TripSource</a> - Travel management app</li>
+            <li><a href="https://apps.apple.com/us/app/eventto-app/id1001673956" target="_blank">Eventto</a> - Event management app</li>
+            <li><a href="https://apps.apple.com/mx/app/pasaporte-nl/id1437667651" target="_blank">Pasaporte NL</a> - Government services app</li>
+            <li><a href="https://apps.apple.com/mx/app/mi-oxxo/id1473147659" target="_blank">Mi OXXO</a> - Retail services app</li>
+        </ul>
+        
+        <h2><span class="blink">&gt;</span> Profile</h2>
+        <p>Experienced iOS Developer with 7 years of industry expertise. Specializing in developing and leading iOS projects for top-tier companies. Successfully led the development of multiple high-impact iOS applications, enhancing user engagement and performance across various industries.</p>
+        
+        <h2><span class="blink">&gt;</span> Work History</h2>
+        <ul>
+            <li>Procore - Senior iOS Engineer (June 2023 - Current)</li>
+            <li>McCormick - Senior iOS Engineer (August 2022 - August 2023)</li>
+            <li>WKG Solutions - Tech Lead (macOS Engineer) (June 2022 - June 2023)</li>
+            <li>Phonon X - Senior iOS Engineer, Founding Member (September 2021 - September 2022)</li>
+            <li>1800 Flowers - Senior iOS Engineer (October 2021 - February 2022)</li>
+            <li>Jamf - Senior iOS & macOS Developer (July 2021 - November 2021)</li>
+            <li>Samsung NEXT - iOS Developer (March 2020 - October 2021)</li>
+            <li>MediaLab.AI - iOS Engineer (September 2019 - March 2020)</li>
+        </ul>
+      
+        <h2><span class="blink">&gt;</span> Skills</h2>
+        <ul>
+            <li>iOS SDKs: UIKit, SwiftUI, Core Data, Core Animation</li>
+            <li>Languages: Swift (Advanced), Objective-C (Intermediate)</li>
+            <li>iOS Architecture: MVC, MVVM, Clean Architecture</li>
+            <li>iOS Testing: XCTest, XCUITest</li>
+            <li>iOS Tools: Xcode, Instruments, Cocoapods, SPM</li>
+            <li>RESTful APIs, GraphQL, SOAP</li>
+            <li>Git, GitHub, Bitbucket</li>
+            <li>Agile/Scrum, CI/CD</li>
+        </ul>
+        
+        <h2><span class="blink">&gt;</span> Education</h2>
+        <p>Bachelor of Software Engineering - Universidad TecMilenio, Monterrey, Nuevo Leon, Mexico (2018)</p>
+        
+        <h2><span class="blink">&gt;</span> Side Projects</h2>
+        <ul>
+            <li>Music Production: Recording, mixing, and mastering with Logic Pro X and Ableton Live</li>
+            <li>Instruments: Guitar, Bass, Drums, Keyboard</li>
+        </ul>
+
+        <h2><span class="blink">&gt;</span> Contact Me</h2>
+        <p><a href="mailto:manuelbulos@gmail.com">manuelbulos@gmail.com</a></p>
+
+        <h2><span class="blink">&gt;</span> Download Resume</h2>
+        <p><a href="Jose_Manuel_Solis_Bulos_Resume.pdf" download>Download PDF Resume</a></p>
+    </div>
+</body>
+</html>
